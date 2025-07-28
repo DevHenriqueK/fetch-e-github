@@ -17,7 +17,7 @@ const screen = {
             repositoriesItems += `<li>
                                     <a href="${repository.html_url}" target="_blank">${repository.name}</a>
                                     <span>Forks: ${repository.forks}</span> <br>
-                                    <span>Linguagem: ${repository.language}</span> <br>
+                                    <span>Linguagem: ${repository.language ?? `Indefinida`}</span> <br>
                                     <span>Stars: ${repository.stargazers_count}</span> <br>
                                     <span>Watchers: ${repository.watchers_count}</span>
                                 </li>`
