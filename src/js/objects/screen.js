@@ -33,9 +33,8 @@ const screen = {
 
         let eventsItems = ''
         user.events.forEach(oneEvent => {
-            if(oneEvent.type === 'PushEvent'){
-                eventsItems += `<li>${oneEvent.repo.name} - ${oneEvent.payload.commits[0].message}</li> <br>`
-            } 
+            if(oneEvent.type === 'PushEvent')eventsItems += `<li>${oneEvent.repo.name} - ${oneEvent.payload.commits[0].message}</li> <br>`
+            
             
             else if(oneEvent.type === 'CreateEvent'){
                 eventsItems += `<li>${oneEvent.repo.name} - Sem mensagem de commit</li> <br>`
